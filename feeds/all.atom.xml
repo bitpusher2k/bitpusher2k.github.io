@@ -92,10 +92,10 @@
 &lt;p&gt;&lt;img alt="Searching the entire path of files with Everything" src="./../images/article-everythinglauncher-pathsearch.png"&gt;&lt;/p&gt;
 &lt;p&gt;Walk on,&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;Bitpusher
-\`._,&amp;#39;/
-(_- -_)
-  \o/
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content><category term="Technology"/><category term="article"/><category term="tips"/><category term="voidtools"/><category term="everything"/><category term="search"/><category term="launcher"/><category term="utility"/></entry><entry><title>Windows Terminal Customization</title><link href="https://bitpusher2k.github.io/Terminal-Customize/" rel="alternate"/><published>2025-01-30T16:40:00-08:00</published><updated>2025-07-19T22:30:00-07:00</updated><author><name>Bitpusher</name></author><id>tag:bitpusher2k.github.io,2025-01-30:/Terminal-Customize/</id><summary type="html">&lt;p&gt;Enhance your Windows terminal experience&lt;/p&gt;</summary><content type="html">&lt;h1&gt;Enhancing the Windows PowerShell experience&lt;/h1&gt;
+ \`._,&amp;#39;/
+ (_- -_)
+   \o/
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content><category term="Technology"/><category term="article"/><category term="tips"/><category term="voidtools"/><category term="everything"/><category term="search"/><category term="launcher"/><category term="utility"/></entry><entry><title>Windows Terminal Customization</title><link href="https://bitpusher2k.github.io/Terminal-Customize/" rel="alternate"/><published>2025-01-30T16:40:00-08:00</published><updated>2025-07-19T22:30:00-07:00</updated><author><name>Bitpusher</name></author><id>tag:bitpusher2k.github.io,2025-01-30:/Terminal-Customize/</id><summary type="html">&lt;p&gt;Enhance your Windows terminal experience to make PowerShell easier to use and learn&lt;/p&gt;</summary><content type="html">&lt;h1&gt;Enhancing the Windows PowerShell experience&lt;/h1&gt;
 &lt;p&gt;&lt;img alt="Windows Terminal" src="./../images/article-terminalcustomization-top.png"&gt;&lt;/p&gt;
 &lt;p&gt;The best tool is the one you have at hand (given that it is reasonably capable of doing the job, anyway), and since some version of PowerShell is natively installed on well over 90% of the systems I need to work on these days, PowerShell proficiency is a very attractive thing.&lt;/p&gt;
 &lt;p&gt;To improve my local PowerShell interactions I've customized the Windows terminal a bit. Customizations are based on &lt;a href="https://www.hanselman.com/blog/how-to-make-a-pretty-prompt-in-windows-terminal-with-powerline-nerd-fonts-cascadia-code-wsl-and-ohmyposh"&gt;those described by Scott Hanselman here&lt;/a&gt;&lt;/p&gt;
