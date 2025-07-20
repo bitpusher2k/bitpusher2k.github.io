@@ -1,0 +1,278 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="index, follow" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,400;0,700;1,400&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="../theme/stylesheet/style.min.css">
+
+    <link id="dark-theme-style" rel="stylesheet" type="text/css"
+          media="(prefers-color-scheme: dark), (prefers-color-scheme: no-preference)"
+    href="../theme/stylesheet/dark-theme.min.css">
+
+    <link id="pygments-dark-theme" rel="stylesheet" type="text/css"
+              media="(prefers-color-scheme: dark), (prefers-color-scheme: no-preference)"
+          href="../theme/pygments/stata-dark.min.css">
+    <link id="pygments-light-theme" rel="stylesheet" type="text/css"
+              media="(prefers-color-scheme: light)"
+          href="../theme/pygments/solarized-light.min.css">
+
+
+
+  <link rel="stylesheet" type="text/css" href="../theme/font-awesome/css/fontawesome.css">
+  <link rel="stylesheet" type="text/css" href="../theme/font-awesome/css/brands.css">
+  <link rel="stylesheet" type="text/css" href="../theme/font-awesome/css/solid.css">
+
+
+  <link rel="shortcut icon" href="https://bitpusher2k.github.io/images/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="https://bitpusher2k.github.io/images/favicon.ico" type="image/x-icon">
+
+  <!-- Chrome, Firefox OS and Opera -->
+  <meta name="theme-color" content="#333">
+  <!-- Windows Phone -->
+  <meta name="msapplication-navbutton-color" content="#333">
+  <!-- iOS Safari -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <!-- Microsoft EDGE -->
+  <meta name="msapplication-TileColor" content="#333">
+
+  <link href="https://bitpusher2k.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="iNeed.to Atom">
+
+  <link href="https://bitpusher2k.github.io/feeds/all.rss.xml" type="application/rss+xml" rel="alternate" title="iNeed.to RSS">
+
+
+ 
+
+<meta name="author" content="Bitpusher" />
+<meta name="description" content="A Yubikey and Entra ID sign-in annoyance mitigated with a Chrome extension" />
+<meta name="keywords" content="article, chrome, extension, alwaysclick, m365, yubikey, token, EntraID, addon">
+
+
+  <meta property="og:site_name" content="iNeed.to"/>
+  <meta property="og:title" content="Always Click and Entra ID"/>
+  <meta property="og:description" content="A Yubikey and Entra ID sign-in annoyance mitigated with a Chrome extension"/>
+  <meta property="og:locale" content="en_US"/>
+  <meta property="og:url" content="../Always-Click/"/>
+  <meta property="og:type" content="article"/>
+  <meta property="article:published_time" content="2025-04-21 19:30:00-07:00"/>
+  <meta property="article:modified_time" content="2025-04-21 19:30:00-07:00"/>
+  <meta property="article:author" content="../author/bitpusher.html">
+  <meta property="article:section" content="Technology"/>
+  <meta property="article:tag" content="article"/>
+  <meta property="article:tag" content="chrome"/>
+  <meta property="article:tag" content="extension"/>
+  <meta property="article:tag" content="alwaysclick"/>
+  <meta property="article:tag" content="m365"/>
+  <meta property="article:tag" content="yubikey"/>
+  <meta property="article:tag" content="token"/>
+  <meta property="article:tag" content="EntraID"/>
+  <meta property="article:tag" content="addon"/>
+  <meta property="og:image" content="https://bitpusher2k.github.io/images/fox.png">
+
+  <title>iNeed.to &ndash; Always Click and Entra ID</title>
+
+
+</head>
+<body >
+
+<aside>
+  <div>
+    <a href="../">
+      <img src="https://bitpusher2k.github.io/images/fox.png" alt="iNeed.to" title="iNeed.to">
+    </a>
+
+    <h1>
+      <a href="../">iNeed.to</a>
+    </h1>
+
+    <p>Seeking the wholeness of the integrated person. Technology - Martial Arts - Learning</p>
+
+
+    <nav>
+      <ul class="list">
+
+
+            <li>
+              <a target="_self"
+                 href="../about#about">
+                About
+              </a>
+            </li>
+            <li>
+              <a target="_self"
+                 href="../Contact#contact">
+                Contact
+              </a>
+            </li>
+
+          <li>
+            <a target="_self" href="/tags.html" >All Tags</a>
+          </li>
+      </ul>
+    </nav>
+
+    <ul class="social">
+      <li>
+        <a class="sc-envelope"
+rel="me"           href="https://ineed.to/pages/contact.html"
+           target="_blank">
+          <i class="fa-solid fa-envelope"></i>
+        </a>
+      </li>
+      <li>
+        <a class="sc-linkedin"
+           href="https://www.linkedin.com/in/vmike/"
+           target="_blank">
+          <i class="fa-brands fa-linkedin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="sc-github"
+           href="https://github.com/bitpusher2k"
+           target="_blank">
+          <i class="fa-brands fa-github"></i>
+        </a>
+      </li>
+      <li>
+        <a class="sc-x-twitter"
+           href="https://x.com/VinceVulpes/"
+           target="_blank">
+          <i class="fa-brands fa-x-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="sc-discord"
+           href="https://discordapp.com/users/370020594353438720"
+           target="_blank">
+          <i class="fa-brands fa-discord"></i>
+        </a>
+      </li>
+      <li>
+        <a class="sc-signal-messenger"
+           href="https://signal.me/#eu/fhL_n_BFwvyodTKNGtfle5qfhYds-m04I73nmEuTg5qkzbzphYZNgJgY65JmA-s0"
+           target="_blank">
+          <i class="fa-brands fa-signal-messenger"></i>
+        </a>
+      </li>
+      <li>
+        <a class="sc-mastodon"
+rel="me"           href="https://defcon.social/@bitpusher"
+           target="_blank">
+          <i class="fa-brands fa-mastodon"></i>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+</aside>
+  <main>
+
+
+<article class="single">
+  <header>
+      
+    <h1 id="Always-Click">Always Click and Entra ID</h1>
+    <p>
+      Posted on 2025-04-21 in <a href="../category/technology.html">Technology</a>
+
+    </p>
+  </header>
+
+
+  <div>
+    <h1>An annoyance born of Entra ID flow, SSO, and hardware tokens</h1>
+<p>Any online account you care about which is capable of supporting multi-factor or multi-step authentication should have those capabilities enabled - the added security is very much worth it. Even better, if any of your accounts support hardware tokens or passkeys it's a good idea to use them for yet greater security. Microsoft's M365 ecosystem, through their Entra ID authentication services, does support hardware tokens <a href="https://yubico.com">such as Yubikeys</a> and passkeys (though only through the Microsoft Authenticator app).</p>
+<p>So, I have a Yubikey configured for authentication to a corporate M365 account. This corporate account is also used to access a number of other services through Entra ID SSO connections - when I need to access these other services the website makes an authentication request through the browser and it's passed to Windows where I'm prompted to use my hardware token.</p>
+<p><img alt="Website authentication prompt" src="./../images/article-alwaysclick-auth1.png"> </p>
+<p><img alt="Windows authentication prompt" src="./../images/article-alwaysclick-token.png"></p>
+<p>I enter a pin, tap the token, and authenticate. So far, so good... </p>
+<p>Then this pops up:</p>
+<p><img alt="Entra ID - Stay signed in?" src="./../images/article-alwaysclick-auth2.png"></p>
+<p>The Entra ID "Stay signed in?" prompt. It is supposed to make life easier by allowing you to reduce the frequency of sign-in prompts on your personal system. The problem is that when using SSO to authenticate to third-party services it is the third-party service which controls the duration of the session, and this prompt does nothing. Additionally, (for my tenant configuration, at least) <em>the "Don't show this again" option has no effect.</em></p>
+<p>So, I frequently find myself working between several tabs/services, and one of the SSO'ed session expires. Since the authentication was through a passkey/token the page with the expired session (even if it is in the background) will trigger the Windows "Sign in with your passkey" popup, interrupting whatever I'm doing. That can't be helped, and using a token means the interruption is at least quick and easy to get through - enter pin and tap token. However, adding insult to injury, if after re-authenticating the expired session I forget to click over to the background tab that started the authentication flow and <em>click past the "Stay signed in?" prompt again</em> the authentication flow will soon time out and when next I go back to that tab I'll have to go through the process all over again.</p>
+<p><img alt="Always Click in the Chrome Web Store" src="./../images/article-alwaysclick-failed.png"></p>
+<h2>A partial solution</h2>
+<p>Nothing can be done at the user level about the expiration of SSO sessions and triggered Windows authentication popups... but there is at least a way to make the authentication complete without having to click the background tab and hit no/yes on the "Stay signed in?" prompt every time - The Chrome extension <a href="https://chromewebstore.google.com/detail/always-click/mcdcmdmbhleoeafjimeobmnchldapbpf">Always Click</a>.</p>
+<p><img alt="Always Click in the Chrome Web Store" src="./../images/article-alwaysclick-install.png"></p>
+<p>This handy extension will auto-click an element on a web page when it loads based on the URL and CSS selector. To make it work on the M365/Entra ID "Stay signed in?" prompt <a href="https://chromewebstore.google.com/detail/always-click/mcdcmdmbhleoeafjimeobmnchldapbpf">install the extension</a>, go to the extension's options, and add two URLs to it's configuration:</p>
+<ul>
+<li>https://login.microsoftonline.com/M365-TENANT-ID/login</li>
+<li>https://login.microsoftonline.com/common/login</li>
+</ul>
+<p>Replace "M365-TENANT-ID" with your M365 tenant's GUID, which you will sometimes see in the URL bar when re-authenticating your account or can <a href="https://entra.microsoft.com/#view/Microsoft_AAD_IAM/TenantOverview.ReactView">lookup here</a>. For the CSS selector paste in "input#idBtn_Back.win-button.button-secondary.button.ext-button.secondary.ext-secondary" without quotes on both lines. Or you can <a href="../Always-Click/always-click-export.json">download and import this settings file</a>.</p>
+<p><img alt="Always Click settings" src="./../images/article-alwaysclick-settings.png"></p>
+<p>With this configuration in place whenever that maddening "Stay signed in?" popup appears the "No" button will be automatically clicked, and authentication completed. One less click for every Entra ID authentication flow, and several saved clicks for every re-authentication triggered by a background tab.</p>
+<p>Walk on,</p>
+<div class="highlight"><pre><span></span><code>Bitpusher
+ \`._,&#39;/
+ (_- -_)
+   \o/
+</code></pre></div>
+  </div>
+  <div class="tag-cloud">
+    <p>
+      <a href="../tag/article.html">article</a>
+      <a href="../tag/chrome.html">chrome</a>
+      <a href="../tag/extension.html">extension</a>
+      <a href="../tag/alwaysclick.html">alwaysclick</a>
+      <a href="../tag/m365.html">m365</a>
+      <a href="../tag/yubikey.html">yubikey</a>
+      <a href="../tag/token.html">token</a>
+      <a href="../tag/entraid.html">EntraID</a>
+      <a href="../tag/addon.html">addon</a>
+    </p>
+  </div>
+
+
+
+
+
+
+</article>
+
+<footer>
+<p>
+  &copy; 2025 Bitpusher - the Digital Fox - This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nd/4.0/deed.en_US" target="_blank">Creative Commons Attribution-NoDerivs</a>
+</p>
+<p>
+Built with <a href="http://getpelican.com" target="_blank">Pelican</a> using <a href="http://bit.ly/flex-pelican" target="_blank">Flex</a> theme
+  <span class="footer-separator">|</span>
+  Switch to the <a href="javascript:void(0)" onclick="theme.switch(`dark`)">dark</a> | <a href="javascript:void(0)" onclick="theme.switch(`light`)">light</a> | <a href="javascript:void(0)" onclick="theme.switch(`browser`)">browser</a> theme
+  <script id="dark-theme-script"
+          src="../theme/dark-theme/dark-theme.min.js"
+          data-enable-auto-detect-theme="True"
+          data-default-theme="dark"
+          type="text/javascript">
+  </script>
+</p><p>
+  <a rel="license"
+     href="http://creativecommons.org/licenses/by-nd/4.0/"
+     target="_blank">
+    <img alt="Creative Commons License"
+         title="Creative Commons License"
+         style="border-width:0"
+           src="https://i.creativecommons.org/l/by-nd/4.0/80x15.png"
+         width="80"
+         height="15"/>
+  </a>
+</p></footer>  </main>
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Blog",
+  "name": " iNeed.to ",
+  "url" : "..",
+  "image": "https://bitpusher2k.github.io/images/fox.png",
+  "description": "Sharing my passion for technology through consulting & scripting, martial arts through teaching, and learning/growth through chronicling my journey"
+}
+</script>
+</body>
+</html>

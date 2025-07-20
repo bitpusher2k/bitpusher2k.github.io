@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>iNeed.to</title><link href="https://bitpusher2k.github.io/" rel="alternate"/><link href="https://bitpusher2k.github.io/feeds/atom.xml" rel="self"/><id>https://bitpusher2k.github.io/</id><updated>2025-07-19T22:30:00-07:00</updated><subtitle>Seeking the wholeness of the integrated person. Technology - Martial Arts - Learning</subtitle><entry><title>Excel Macro Set</title><link href="https://bitpusher2k.github.io/Excel-Macros/" rel="alternate"/><published>2025-05-20T19:30:00-07:00</published><updated>2025-05-20T19:30:00-07:00</updated><author><name>Bitpusher</name></author><id>tag:bitpusher2k.github.io,2025-05-20:/Excel-Macros/</id><summary type="html">&lt;p&gt;Adding a few simple macros to the Excel ribbon can greatly enhance functionality &amp;amp; speed common tasks&lt;/p&gt;</summary><content type="html">&lt;h1&gt;Spreadsheets - A killer app since 1979&lt;/h1&gt;
+&lt;p&gt;&lt;img alt="The macro ribbon" src="./../images/article-excelmacros-thejob.png"&gt;&lt;/p&gt;
+&lt;p&gt;I'm no Excel expert, but nonetheless find myself working with the magical grid nearly every day. Very often for my line of work that entails reviewing log files for suspicious activity, finding patterns, and preparing reports based on what I find. after doing the same steps over and over, I finally dug in, assembled a set of macros, and figured out how to add them to the Excel ribbon menu for easy access.&lt;/p&gt;
+&lt;h2&gt;My Excel Macro Ribbon Set&lt;/h2&gt;
+&lt;p&gt;&lt;img alt="The macro ribbon" src="./../images/article-excelmacros-intro.png"&gt;&lt;/p&gt;
+&lt;p&gt;You can download the set of &lt;a href="https://github.com/bitpusher2k/ExcelMacros"&gt;ExcelMacros on GitHub here&lt;/a&gt; and follow the included instructions for adding them to your Excel ribbon. Full installation and configuration information is in the &lt;a href="https://github.com/bitpusher2k/ExcelMacros/blob/main/README.md"&gt;readme&lt;/a&gt;, and here is a description of what each macro/button in the current version can do for you:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Initialize CSV - Applies the next five macros in sequence - Handy for initializing a CSV log file for manual review.&lt;/li&gt;
+&lt;li&gt;Auto Fit All Columns (50) - Auto-fits all column width with maximum with for each column of 50 characters.&lt;/li&gt;
+&lt;li&gt;Auto Fit All Rows (50) - Auto-fits all row height with maximum height for each row of 50 characters.&lt;/li&gt;
+&lt;li&gt;Add Filter - Adds filter to top row. I know this is easy enough to do with the Ctrl+Shift+L shortcut, but this fits in with the flow when using other related macros and the "Initialize CSV" above.&lt;/li&gt;
+&lt;li&gt;Hide Empty Columns - Hides all columns which have data only in the first row (assumed to be the header row).&lt;/li&gt;
+&lt;li&gt;Hide GUID Columns - Hide all columns which have a GUID in the second row (the first is assumed to be the header).&lt;/li&gt;
+&lt;li&gt;Split Date And Time To New Columns - Use only if a column containing date-space-time is selected - Creates two new columns to the right, copies date into the first, and copies time into the second.&lt;/li&gt;
+&lt;li&gt;Highlight Cells With Selected Value - Highlights all CELLS which contains the value in the currently selected cell. Can then use filter by color to limit view to highlighted entries.&lt;/li&gt;
+&lt;li&gt;Highlight Rows With Selected Value - Highlights all ROWS that have a cell which contains the value in the currently selected cell. &lt;em&gt;Separate macros for yellow/green/red highlighting included.&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;Blank If Error - Surround formulas in all selected cells with =IFERROR(,"").&lt;/li&gt;
+&lt;li&gt;Convert Selected To Values - Converts formulas in selected cells to values.&lt;/li&gt;
+&lt;li&gt;Highlight Duplicate Values Selected Range - Highlights duplicate values in the selected range of cells.&lt;/li&gt;
+&lt;li&gt;Save Worksheet As PDF - Saves current worksheet as a PDF of the same name in the same folder as the original without any further prompts.&lt;/li&gt;
+&lt;li&gt;Save Worksheet As XLSX - Saves current worksheet as XLSX with same path &amp;amp; filename as the original open file. Handy when processing CSV files - faster than pressing F12 &amp;gt; clicking Drop-down menu &amp;gt; clicking XLSX &amp;gt; clicking Save.&lt;/li&gt;
+&lt;li&gt;Clear All Highlighting - Clears all highlighting in the worksheet (in case highlighting went awry with previous macros).&lt;/li&gt;
+&lt;li&gt;Unhide All Rows Columns - Un-hides all manually hidden columns (and rows, if no filters are applied).&lt;/li&gt;
+&lt;li&gt;CustomSort - Brings up the custom sort dialog (saves a couple clicks).&lt;/li&gt;
+&lt;li&gt;Delete Hidden Rows - Deletes all currently hidden rows.&lt;/li&gt;
+&lt;li&gt;DeleteH idden Columns - Deletes all currently hidden columns.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img alt="The macro ribbon in action" src="./../images/article-excelmacros-excel.png"&gt;&lt;/p&gt;
+&lt;p&gt;Caveat Emptor: These macros are not particularly refined - no error handling, and some edge cases will cause them to fail - but they're good enough to save me a lot of time daily, so they're about as good as they're going to get for now.&lt;/p&gt;
+&lt;h2&gt;Additional Excel tips&lt;/h2&gt;
+&lt;p&gt;If you, like me, tend to have multiple spreadsheets open I recommend updating the Registry so that when opening a sheet/CSV by double-clicking it opens Excel in Embedded mode (prevents the default workbook Book.xltx from being created and startup screen from appearing) and opens each sheet/CSV in its own instance of the "Excel.exe" app so that if an operation (function, macro) is fully occupying one instance all of them are not frozen (you can go work on another sheet until the macro finishes). &lt;/p&gt;
+&lt;p&gt;The changes needed are at least updating "Excel.CSV" and "Excel.Sheet.12":&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;HKEY_CLASSES_ROOT\Excel.Sheet.12\shell\Open\command to "\"C:\Program Files\Microsoft Office\Root\Office16\EXCEL.EXE\" /e \"%1\" /o \"%u\""&lt;/li&gt;
+&lt;li&gt;HKEY_CLASSES_ROOT\Excel.CSV\shell\Open\command to "\"C:\Program Files\Microsoft Office\Root\Office16\EXCEL.EXE\" /e \"%1\" /o \"%u\""&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img alt="Read-only" src="./../images/article-excelmacros-reg.png"&gt;&lt;/p&gt;
+&lt;p&gt;Here are two REG files that can be imported to update these values: &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://bitpusher2k.github.io/Excel-Macros/ExcelCSVopenwithoutotherpopup.reg"&gt;ExcelCSVopenwithoutotherpopup.reg&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://bitpusher2k.github.io/Excel-Macros/ExcelSheetopenwithoutotherpopup.reg"&gt;ExcelSheetopenwithoutotherpopup.reg&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Then go to %appdata%\Microsoft\Excel\XLSTART, right-click PERSONAL.XLSB and set the file attributes to read-only to prevent a "file in use" popup when multiple instances of Excel are started and each reads the macro file.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Read-only" src="./../images/article-excelmacros-readonly.png"&gt;&lt;/p&gt;
+&lt;p&gt;Walk on,&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;Bitpusher
+ \`._,&amp;#39;/
+ (_- -_)
+   \o/
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content><category term="Technology"/><category term="article"/><category term="excel"/><category term="macro"/><category term="logs"/><category term="formatting"/><category term="incident"/><category term="response"/><category term="ribbon"/></entry><entry><title>Always Click and Entra ID</title><link href="https://bitpusher2k.github.io/Always-Click/" rel="alternate"/><published>2025-04-21T19:30:00-07:00</published><updated>2025-04-21T19:30:00-07:00</updated><author><name>Bitpusher</name></author><id>tag:bitpusher2k.github.io,2025-04-21:/Always-Click/</id><summary type="html">&lt;p&gt;A Yubikey and Entra ID sign-in annoyance mitigated with a Chrome extension&lt;/p&gt;</summary><content type="html">&lt;h1&gt;An annoyance born of Entra ID flow, SSO, and hardware tokens&lt;/h1&gt;
+&lt;p&gt;Any online account you care about which is capable of supporting multi-factor or multi-step authentication should have those capabilities enabled - the added security is very much worth it. Even better, if any of your accounts support hardware tokens or passkeys it's a good idea to use them for yet greater security. Microsoft's M365 ecosystem, through their Entra ID authentication services, does support hardware tokens &lt;a href="https://yubico.com"&gt;such as Yubikeys&lt;/a&gt; and passkeys (though only through the Microsoft Authenticator app).&lt;/p&gt;
+&lt;p&gt;So, I have a Yubikey configured for authentication to a corporate M365 account. This corporate account is also used to access a number of other services through Entra ID SSO connections - when I need to access these other services the website makes an authentication request through the browser and it's passed to Windows where I'm prompted to use my hardware token.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Website authentication prompt" src="./../images/article-alwaysclick-auth1.png"&gt; &lt;/p&gt;
+&lt;p&gt;&lt;img alt="Windows authentication prompt" src="./../images/article-alwaysclick-token.png"&gt;&lt;/p&gt;
+&lt;p&gt;I enter a pin, tap the token, and authenticate. So far, so good... &lt;/p&gt;
+&lt;p&gt;Then this pops up:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Entra ID - Stay signed in?" src="./../images/article-alwaysclick-auth2.png"&gt;&lt;/p&gt;
+&lt;p&gt;The Entra ID "Stay signed in?" prompt. It is supposed to make life easier by allowing you to reduce the frequency of sign-in prompts on your personal system. The problem is that when using SSO to authenticate to third-party services it is the third-party service which controls the duration of the session, and this prompt does nothing. Additionally, (for my tenant configuration, at least) &lt;em&gt;the "Don't show this again" option has no effect.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;So, I frequently find myself working between several tabs/services, and one of the SSO'ed session expires. Since the authentication was through a passkey/token the page with the expired session (even if it is in the background) will trigger the Windows "Sign in with your passkey" popup, interrupting whatever I'm doing. That can't be helped, and using a token means the interruption is at least quick and easy to get through - enter pin and tap token. However, adding insult to injury, if after re-authenticating the expired session I forget to click over to the background tab that started the authentication flow and &lt;em&gt;click past the "Stay signed in?" prompt again&lt;/em&gt; the authentication flow will soon time out and when next I go back to that tab I'll have to go through the process all over again.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Always Click in the Chrome Web Store" src="./../images/article-alwaysclick-failed.png"&gt;&lt;/p&gt;
+&lt;h2&gt;A partial solution&lt;/h2&gt;
+&lt;p&gt;Nothing can be done at the user level about the expiration of SSO sessions and triggered Windows authentication popups... but there is at least a way to make the authentication complete without having to click the background tab and hit no/yes on the "Stay signed in?" prompt every time - The Chrome extension &lt;a href="https://chromewebstore.google.com/detail/always-click/mcdcmdmbhleoeafjimeobmnchldapbpf"&gt;Always Click&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Always Click in the Chrome Web Store" src="./../images/article-alwaysclick-install.png"&gt;&lt;/p&gt;
+&lt;p&gt;This handy extension will auto-click an element on a web page when it loads based on the URL and CSS selector. To make it work on the M365/Entra ID "Stay signed in?" prompt &lt;a href="https://chromewebstore.google.com/detail/always-click/mcdcmdmbhleoeafjimeobmnchldapbpf"&gt;install the extension&lt;/a&gt;, go to the extension's options, and add two URLs to it's configuration:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;https://login.microsoftonline.com/M365-TENANT-ID/login&lt;/li&gt;
+&lt;li&gt;https://login.microsoftonline.com/common/login&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Replace "M365-TENANT-ID" with your M365 tenant's GUID, which you will sometimes see in the URL bar when re-authenticating your account or can &lt;a href="https://entra.microsoft.com/#view/Microsoft_AAD_IAM/TenantOverview.ReactView"&gt;lookup here&lt;/a&gt;. For the CSS selector paste in "input#idBtn_Back.win-button.button-secondary.button.ext-button.secondary.ext-secondary" without quotes on both lines. Or you can &lt;a href="https://bitpusher2k.github.io/Always-Click/always-click-export.json"&gt;download and import this settings file&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Always Click settings" src="./../images/article-alwaysclick-settings.png"&gt;&lt;/p&gt;
+&lt;p&gt;With this configuration in place whenever that maddening "Stay signed in?" popup appears the "No" button will be automatically clicked, and authentication completed. One less click for every Entra ID authentication flow, and several saved clicks for every re-authentication triggered by a background tab.&lt;/p&gt;
+&lt;p&gt;Walk on,&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;Bitpusher
+ \`._,&amp;#39;/
+ (_- -_)
+   \o/
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content><category term="Technology"/><category term="article"/><category term="chrome"/><category term="extension"/><category term="alwaysclick"/><category term="m365"/><category term="yubikey"/><category term="token"/><category term="EntraID"/><category term="addon"/></entry><entry><title>Everything Launcher</title><link href="https://bitpusher2k.github.io/Everything-Launcher/" rel="alternate"/><published>2025-02-23T16:40:00-08:00</published><updated>2025-02-23T16:40:00-08:00</updated><author><name>Bitpusher</name></author><id>tag:bitpusher2k.github.io,2025-02-23:/Everything-Launcher/</id><summary type="html">&lt;p&gt;Consider using a fast search tool as your launcher - better than Spotlight/PowerToys Run/Launchy/etc.&lt;/p&gt;</summary><content type="html">&lt;h1&gt;Accidentally using a search tool as a launcher&lt;/h1&gt;
+&lt;p&gt;Long before PowerToys Run was a thing I accidentally began using the &lt;a href="https://www.voidtools.com/"&gt;search program Everything by Voidtools&lt;/a&gt; as a launcher... and it worked out so well I'm not going to stop any time soon.&lt;/p&gt;
+&lt;p&gt;If you don't know about Everything, it's a lightning-fast search utility that instantly became one of the first tools I install on any new system after I discovered it (I think through its inclusion on ninite.com). Despite the great improvements to the built-in Windows search in the past decade it still can't touch the performance of good third-party tools, and the desire to have quality search at my fingertips lead me to tie opening the Everything utility to the shortcut Ctrl+Win+A using an &lt;a href="https://github.com/bitpusher2k/AHKscripts"&gt;AutoHotKeys macro&lt;/a&gt;. After that, I found myself naturally using it to locate and run programs. &lt;/p&gt;
+&lt;p&gt;&lt;img alt="Searching for a program with Everything" src="./../images/article-everythinglauncher-search.png"&gt;&lt;/p&gt;
+&lt;p&gt;Since Everything is so handy and can locate bat scripts, portable executables, and other odd apps &amp;amp; utilities that I store in unconventional locations instantly it functions as the best launcher I've ever used - and without barely any configuration or customization. I'd strongly recommend trying it - fantastic as a search tool, and if you like to keep you hands on the keyboard and have rapid access to all programs/scripts on your system (wherever they may be) it could work great as a launcher for you, too. &lt;/p&gt;
+&lt;p&gt;Install Everything using WinGet by running &lt;/p&gt;
+&lt;p&gt;&lt;code&gt;winget install -e --id voidtools.Everything&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://www.voidtools.com/downloads/"&gt;Download installer/portable version at https://www.voidtools.com/downloads/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;I'd recommend the Alpha 1.5 version (mainly due to the addition of a dark theme)...&lt;/p&gt;
+&lt;p&gt;WinGet install: &lt;/p&gt;
+&lt;p&gt;&lt;code&gt;winget install -e --id=voidtools.Everything.Alpha&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://www.voidtools.com/everything-1.5a/"&gt;Download installer/portable version at https://www.voidtools.com/everything-1.5a/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://www.voidtools.com/support/everything/searching/"&gt;Learn about the search operators at https://www.voidtools.com/support/everything/searching/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;The default settings are decent - The only areas I'd recommend reviewing at the outset are what drives are being indexed under Tools &amp;gt; Options &amp;gt; Indexes, and enabling searching the entire path of a file under Search &amp;gt; Match Path.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Searching the entire path of files with Everything" src="./../images/article-everythinglauncher-pathsearch.png"&gt;&lt;/p&gt;
+&lt;p&gt;Walk on,&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;Bitpusher
+\`._,&amp;#39;/
+(_- -_)
+  \o/
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content><category term="Technology"/><category term="article"/><category term="tips"/><category term="voidtools"/><category term="everything"/><category term="search"/><category term="launcher"/><category term="utility"/></entry><entry><title>Windows Terminal Customization</title><link href="https://bitpusher2k.github.io/Terminal-Customize/" rel="alternate"/><published>2025-01-30T16:40:00-08:00</published><updated>2025-07-19T22:30:00-07:00</updated><author><name>Bitpusher</name></author><id>tag:bitpusher2k.github.io,2025-01-30:/Terminal-Customize/</id><summary type="html">&lt;p&gt;Enhance your Windows terminal experience&lt;/p&gt;</summary><content type="html">&lt;h1&gt;Enhancing the Windows PowerShell experience&lt;/h1&gt;
+&lt;p&gt;&lt;img alt="Windows Terminal" src="./../images/article-terminalcustomization-top.png"&gt;&lt;/p&gt;
+&lt;p&gt;The best tool is the one you have at hand (given that it is reasonably capable of doing the job, anyway), and since some version of PowerShell is natively installed on well over 90% of the systems I need to work on these days, PowerShell proficiency is a very attractive thing.&lt;/p&gt;
+&lt;p&gt;To improve my local PowerShell interactions I've customized the Windows terminal a bit. Customizations are based on &lt;a href="https://www.hanselman.com/blog/how-to-make-a-pretty-prompt-in-windows-terminal-with-powerline-nerd-fonts-cascadia-code-wsl-and-ohmyposh"&gt;those described by Scott Hanselman here&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;Windows Terminal customization steps&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="(https://learn.microsoft.com/en-us/windows/terminal/install)"&gt;Install Windows Terminal&lt;/a&gt; and &lt;a href="https://learn.microsoft.com/en-us/windows/package-manager/winget/"&gt;WinGet&lt;/a&gt; if they are not already installed (they are by default in Windows 11)]
+    (All below code blocks assume they are being entered in a Windows Terminal PowerShell window)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="https://learn.microsoft.com/en-us/powershell/scripting/install/installing-powershell-on-windows?view=powershell-7.4"&gt;Install PowerShell 7&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;winget search Microsoft.PowerShell&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;winget install --id Microsoft.Powershell --source winget&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Install a nice console font that includes ligatures &amp;amp; hieroglyphs - CaskaydiaCove NF recommended but &lt;a href="https://www.nerdfonts.com/font-downloads"&gt;any overkill Nerd Font will work&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/CascadiaCode.zip"&gt;Download CaskaydiaCove Nerd Font&lt;/a&gt; &amp;amp; extract all TTF fonts to to c:\windows\fonts
+&lt;code&gt;Invoke-WebRequest "https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/CascadiaCode.zip" -Out CascadiaCode.zip&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;$zip = [IO.Compression.ZipFile]::OpenRead("$($PWD.path)\CascadiaCode.zip")&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;$entries = $zip.Entries | where {$_.FullName -like '*.ttf'}&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;$entries | foreach {[IO.Compression.ZipFileExtensions]::ExtractToFile( $_, "c:\Windows\fonts\" + $_.Name)}&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;$zip.Dispose()&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="https://github.com/gerardog/gsudo"&gt;Install gsudo (for prompt elevation option)&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;winget install -e --id gerardog.gsudo&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Customize Windows Terminal settings and add 'Admin' terminal profiles&lt;/p&gt;
+&lt;p&gt;a. From Windows Terminal pull down menu and select 'Settings'&lt;/p&gt;
+&lt;p&gt;b. Select PowerShell profile&lt;/p&gt;
+&lt;p&gt;c. Under 'Appearance' switch profile font to installed Nerd Font
+&lt;img alt="Windows Terminal settings" src="./../images/article-terminalcustomization-settings.png"&gt;&lt;/p&gt;
+&lt;p&gt;d. Select "Add new profile" &amp;gt; Duplicate the profile above&lt;/p&gt;
+&lt;p&gt;e. Customize the new profile to run as administrator, and rename with "(admin)" in the title
+&lt;img alt="Windows Terminal menu" src="./../images/article-terminalcustomization-runasadmin.png"&gt;&lt;/p&gt;
+&lt;p&gt;f. Repeat this for each of the PowerShell 5, PowerShell 7, and CMD profiles - you should end up with menu options for PS5, PS7, CMD, and admin versions of each
+&lt;img alt="Windows Terminal menu" src="./../images/article-terminalcustomization-menu.png"&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Start a PowerShell 7 session and &lt;a href="https://learn.microsoft.com/en-us/powershell/gallery/powershellget/"&gt;install PowerShellGet if not already installed&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Install-Module PowerShellGet -Force&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Close all open Windows Terminal windows&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="https://ohmyposh.dev/docs/installation/windows"&gt;Start a PowerShell 7 session and install Oh-my-posh (terminal theme engine)&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;winget install --id JanDeDobbeleer.OhMyPosh --source winget&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="https://github.com/PowerShell/PSReadLine"&gt;Install PSReadLine (syntax coloring, handle multi-line, history, etc.)&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Install-Module -Name PSReadLine -AllowPrerelease -Scope CurrentUser -Force -SkipPublisherCheck&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="https://github.com/devblackops/Terminal-Icons"&gt;Install terminal icons (show file/folder icons in terminal)&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Install-Module -Name Terminal-Icons -Repository PSGallery&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Update profile for PowerShell 7 to start with customizations&lt;/p&gt;
+&lt;p&gt;a. Open PS 7 window&lt;/p&gt;
+&lt;p&gt;b. Run "notepad $PROFILE"&lt;/p&gt;
+&lt;p&gt;c. Allow notepad to create a new file if it does not already exist&lt;/p&gt;
+&lt;p&gt;d. Add the following lines to the end of the file and save:&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="n"&gt;oh&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;my&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;posh&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;init&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;pwsh&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="c1"&gt;--config &amp;quot;$env:POSH_THEMES_PATH\jandedobbeleer.omp.json&amp;quot; | Invoke-Expression # Start Oh My Posh with JanDeDobbeleer theme&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="n"&gt;Import&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="k"&gt;Module&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;PSReadLine&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="err"&gt;#&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;Start&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;the&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;PSReadLine&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;module&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="ow"&gt;and&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;set&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;up&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;options&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;below&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="k"&gt;Set&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;PSReadLineOption&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;PredictionSource&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;History&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="k"&gt;Set&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;PSReadLineOption&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;PredictionViewStyle&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;ListView&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="k"&gt;Set&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;PSReadLineOption&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;EditMode&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Windows&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="n"&gt;Import&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="k"&gt;Module&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;Name&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Terminal&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;Icons&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="err"&gt;$&lt;/span&gt;&lt;span class="nl"&gt;env&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;POWERSHELL_TELEMETRY_OPTOUT&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="err"&gt;#&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Opt&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="k"&gt;out&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;of&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;sending&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;telemetry&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;data&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;to&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Microsoft&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nl"&gt;https&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="o"&gt;//&lt;/span&gt;&lt;span class="n"&gt;learn&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;microsoft&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;com&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;en&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;us&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;powershell&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="k"&gt;module&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;microsoft&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;powershell&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;core&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;about&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;about_telemetry&lt;/span&gt;&lt;span class="vm"&gt;?&lt;/span&gt;&lt;span class="k"&gt;view&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;powershell&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mf"&gt;7.5&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="err"&gt;$&lt;/span&gt;&lt;span class="k"&gt;Global&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt;&lt;span class="n"&gt;PSDefaultParameterValues&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="k"&gt;Add&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="ss"&gt;&amp;quot;Out-Default:OutVariable&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="ss"&gt;&amp;quot;__&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="err"&gt;#&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Results&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;of&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="ow"&gt;all&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;the&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;commands&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;entered&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;will&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;end&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;up&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="ow"&gt;in&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;the&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="err"&gt;$&lt;/span&gt;&lt;span class="n"&gt;__&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;variable&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="err"&gt;$&lt;/span&gt;&lt;span class="k"&gt;Global&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt;&lt;span class="n"&gt;PSDefaultParameterValues&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="k"&gt;Add&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="ss"&gt;&amp;quot;Update-Help:UICulture&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="n"&gt;cultureinfo&lt;/span&gt;&lt;span class="o"&gt;]::&lt;/span&gt;&lt;span class="k"&gt;new&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="ss"&gt;&amp;quot;en-US&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="err"&gt;#&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;Set&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;UICulture&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;for&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;Update&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;Help&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="n"&gt;clear&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Close all open Windows Terminal windows &amp;amp; reopen one more time&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;DONE! Pin the 'Windows Terminal' to your task bar &amp;amp; enjoy easy access to an enhanced PowerShell experience&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Windows Terminal menu" src="./../images/article-terminalcustomization-window.png"&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;For more information on the process see &lt;a href="https://learn.microsoft.com/en-us/windows/terminal/tutorials/custom-prompt-setup"&gt;Microsoft's tutorial&lt;/a&gt; and Scott's video &lt;a href="https://youtu.be/VT2L1SXFq9U"&gt;How to make the ultimate Terminal Prompt on Windows 11&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Walk on,&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;Bitpusher
+ \`._,&amp;#39;/
+ (_- -_)
+   \o/
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content><category term="Technology"/><category term="article"/><category term="windows"/><category term="terminal"/><category term="powershell"/><category term="customize"/><category term="psreadline"/><category term="nerdfont"/><category term="gsudo"/></entry></feed>
