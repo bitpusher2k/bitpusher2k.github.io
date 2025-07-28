@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>iNeed.to - fixmycomputer</title><link href="https://ineed.to/" rel="alternate"/><link href="https://ineed.to/feeds/fixmycomputer.atom.xml" rel="self"/><id>https://ineed.to/</id><updated>2025-05-20T19:30:00-07:00</updated><subtitle>Seeking the wholeness of the integrated person. Technology - Martial Arts - Learning</subtitle><entry><title>Tune up your computer with recommended software</title><link href="https://ineed.to/tuneup/" rel="alternate"/><published>2023-03-30T16:40:00-07:00</published><updated>2025-05-20T19:30:00-07:00</updated><author><name>Bitpusher</name></author><id>tag:ineed.to,2023-03-30:/tuneup/</id><summary type="html">&lt;p&gt;Recommended software for a safe, secure, and productive PC&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;img alt="Fox right" src="./../images/techtip.png" style="width: 450px; height: auto;"/&gt;&lt;/p&gt;
+&lt;h1&gt;Tune up your computer with recommended software for a safe, secure, and productive PC&lt;/h1&gt;
+&lt;h2&gt;Password management, MFA, &amp;amp; Passkeys&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://bitwarden.com/"&gt;Bitwarden (free, or $10/year to add one-time key support)&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://keepass.info/download.html"&gt;KeePass (free and open source)&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;AV/EDR&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://support.microsoft.com/en-us/office/windows-security-app-overview-ae70cc96-a9cd-4443-a210-e41cb973d3a6"&gt;Windows Security App (built into Windows 10/11)&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://www.malwarebytes.com/mwb-download/thankyou"&gt;Malwarebytes (free - will try to upsell you, but still decent)&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;Software patching&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://github.com/marticliment/UnigetUI/releases/latest/download/UniGetUI.Installer.exe"&gt;UniGetUI (free and open source)&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;Backup&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://www.dropbox.com/referrals/AADQRCBPXjGV4eKM1RSAtK64w3FrKxXQ0mI?src=global9"&gt;Dropbox (2gb free online sync/backup)&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://drive.google.com/drive/my-drive"&gt;Google Drive (15gb storage with free google account - best photo backup &amp;amp; sharing)&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://secure.backblaze.com/r/01c2ra"&gt;Backblaze&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://freefilesync.org/download.php"&gt;FreeFileSync (best for syncing files to external media manually)&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://duplicati.com/download"&gt;Duplicati (local backup utility - free personal version)&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://www.fbackup.com/fbackup.html"&gt;FBackup (free local backup utility)&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;Productivity&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://www.firefox.com/en-US/?redirect_source=mozilla-org"&gt;Firefox (free and independent browser with great extensions)&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://www.sumatrapdfreader.org/free-pdf-reader"&gt;Sumatra PDF (free, small and lightning fast PDF/epub/mobi reader)&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://www.videolan.org/vlc/"&gt;VLC (free and open source media player)&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://www.7-zip.org/"&gt;7-Zip (free and open source archive file manager - zip, rar, cab, 7z, etc.)&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://www.getpaint.net/index.html"&gt;Paint.NET (free image and photo editor)&lt;/a&gt;&lt;/p&gt;
+&lt;h1&gt;Quick installer to get KeePass, Malwarebytes, Dropbox, Firefox, SumatraPDF, VLC, 7-zip, Everything, and Paint.NET installed all at once&lt;/h1&gt;
+&lt;p&gt;&lt;img alt="Ninite" src="https://ninite.com/static/img/brand-8a2e7c6ad769d6bc457c5c2b1a9743e8.png"/&gt;
+&lt;a href="https://ninite.com/7zip-dropbox-everything-firefox-keepass2-malwarebytes-paint.net-sumatrapdf-vlc/ninite.exe"&gt;From Ninite.com - download &amp;amp; run&lt;/a&gt;&lt;/p&gt;
+&lt;h1&gt;BONUS - Security Awareness&lt;/h1&gt;
+&lt;p&gt;&lt;a href="https://blog.knowbe4.com/red-flags-warn-of-social-engineering"&gt;Know the Red Flags of Social Engineering&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Fox right" src="./../images/redflags.jpg" style="width: 3300px; height: auto;"/&gt;&lt;/p&gt;
+&lt;p&gt;Walk on,&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt; \`._,'/
+ (_- -_)
+   \o/
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content><category term="fixmycomputer"/><category term="article"/><category term="tips"/><category term="basic"/><category term="recommended"/><category term="software"/><category term="password"/><category term="mfa"/><category term="backup"/><category term="patching"/><category term="productivity"/><category term="security"/></entry></feed>
