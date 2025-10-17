@@ -50,17 +50,32 @@
 
  
 
-    <meta name="author" content="Bitpusher" />
-    <meta name="description" content="Sharing my passion for technology through consulting & scripting, martial arts through teaching, and learning/growth through chronicling my journey" />
+<meta name="author" content="Bitpusher" />
+<meta name="description" content="The best presentation on business email compromise investigation I&#39;ve seen in years" />
+<meta name="keywords" content="article, m365, bec, investigation, logs, incident, response, scripting">
+
+
   <meta property="og:site_name" content="iNeed.to"/>
-  <meta property="og:type" content="blog"/>
-  <meta property="og:title" content="iNeed.to"/>
-  <meta property="og:description" content="Sharing my passion for technology through consulting & scripting, martial arts through teaching, and learning/growth through chronicling my journey"/>
+  <meta property="og:title" content="M365 BEC investigation easy as Cake"/>
+  <meta property="og:description" content="The best presentation on business email compromise investigation I&#39;ve seen in years"/>
   <meta property="og:locale" content="en_US"/>
-  <meta property="og:url" content="https://ineed.to"/>
+  <meta property="og:url" content="https://ineed.to/bec-cake/"/>
+  <meta property="og:type" content="article"/>
+  <meta property="article:published_time" content="2025-10-15 19:30:00-07:00"/>
+  <meta property="article:modified_time" content="2025-10-15 19:30:00-07:00"/>
+  <meta property="article:author" content="https://ineed.to/author/bitpusher.html">
+  <meta property="article:section" content="code"/>
+  <meta property="article:tag" content="article"/>
+  <meta property="article:tag" content="m365"/>
+  <meta property="article:tag" content="bec"/>
+  <meta property="article:tag" content="investigation"/>
+  <meta property="article:tag" content="logs"/>
+  <meta property="article:tag" content="incident"/>
+  <meta property="article:tag" content="response"/>
+  <meta property="article:tag" content="scripting"/>
   <meta property="og:image" content="https://ineed.to/images/fox.png">
 
-  <title>iNeed.to &ndash; Tag voidtools</title>
+  <title>iNeed.to &ndash; M365 BEC investigation easy as Cake</title>
 
 
 </head>
@@ -195,32 +210,59 @@ rel="me"           href="https://defcon.social/@bitpusher"
   <main>
 
 
-
-
-<article>
+<article class="single">
   <header>
-    <h2><a href="https://ineed.to/everything-launcher/#everything-launcher">Everything Launcher</a></h2>
+      
+    <h1 id="bec-cake">M365 BEC investigation easy as Cake</h1>
     <p>
-      Posted on 2024-02-23 in <a href="https://ineed.to/category/code.html">code</a>
+      Posted on 2025-10-15 in <a href="https://ineed.to/category/code.html">code</a>
 
-          &#8226; Tagged with
-              <a href="https://ineed.to/tag/article.html">article</a>,              <a href="https://ineed.to/tag/tips.html">tips</a>,              <a href="https://ineed.to/tag/voidtools.html">voidtools</a>,              <a href="https://ineed.to/tag/everything.html">everything</a>,              <a href="https://ineed.to/tag/search.html">search</a>,              <a href="https://ineed.to/tag/launcher.html">launcher</a>,              <a href="https://ineed.to/tag/utility.html">utility</a>
     </p>
   </header>
+
+
   <div>
-      <div><p>Consider using a fast search tool as your launcher - better than Spotlight/PowerToys Run/Launchy/etc.</p></div>
-        <br>
-        <a class="btn"
-           href="https://ineed.to/everything-launcher/#everything-launcher">
-          Continue reading
-        </a>
+    <h1>Business email compromise investigation</h1>
+<p>By far the most common type of impactful security incident is the business email compromise, or "BEC" - and the most common platform for a BEC is M365. After a threat actor gains access to someone's email account there are a number of nefarious and damaging things they can do - including sending malicious spam out from the account, hijacking email conversations, and instigating wire fraud by redirecting payments.</p>
+<p>The best presentation I've seen on how to investigate these incidents in a long time was recently uploaded to YouTube. It's by Patterson Cake - an expirenced incident responder who emphasizes simplicity, effectiveness, and repeatability in his workflows:</p>
+<p>Business Email Compromise Detect, Respond, &amp; Prevent w/ Patterson Cake</p>
+<div style=" position: relative; padding-bottom: 56.25%;">
+<iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="" frameborder="0" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/NoIeluVIEeE" style="border: 1; top: 0; left: 0; width: 100%; height: 100%; position: absolute;" title="Business Email Compromise Detect, Respond, &amp; Prevent w/ Patterson Cake">
+</iframe>
+</div>
+<p>Investigating &amp; responding to M365 BEC is a bit technical - this information will be of most benefit to those already somewhat familiar with email, M365 administration, Excel, etc..</p>
+<p><a href="https://www.blackhillsinfosec.com/wp-content/uploads/2025/10/SLIDES_BEC-Preven-Detect-Respond-Webcast-109022025.pdf">Slides are available here</a> and Patterson has scripts to support BEC investigation on his GitHub at <a href="https://github.com/secure-cake/m365-bec-resources">https://github.com/secure-cake/m365-bec-resources</a>.</p>
+<h1>And more BEC investigation scripts</h1>
+<p>If you're still here you may be interested in more resources for M365 BEC, and as it happens I've written a number of scripts that support various aspects of M365 BEC incident response and investigation - all are available at <a href="https://github.com/bitpusher2k/M365IRScripts">https://github.com/bitpusher2k/M365IRScripts</a>.</p>
+<p><img alt="The macro ribbon" src="./../images/article-beccake-irscripts.png" style="width: 1183px; height: auto;"/></p>
+<p>These scripts are targeted and SMB/SME incident response, where more sophisticated enterprise tools such as Microsoft Sentinel or other SIEM are not available. All require only administrative access to the M365 tenant, and the installation of a few PowerShell modules. Overview of BEC response &amp; investigation process is in the <a href="https://github.com/bitpusher2k/M365IRScripts/blob/main/README.md">ReadMe</a>. Again, a certain level of familiarity with M365 and PowerShell will be needed to get the most out of this repository.</p>
+<p>Of particular utility for manual investigation of incidents for me are 05-ProcessUnifiedAuditLogFlatten.ps1 which flattens out the blob of JSON data in a CSV export from the Unified Audit Log, and 06-Lookup-IPInfoCSV.ps1 which takes IP addresses from a column in a CSV and adds geolocation, ISP, and other valuable information (based on the service selected to look it up online).</p>
+<p>Feel free to reach out to me with any feedback or questions.</p>
+<p>Walk on,</p>
+<div class="highlight"><pre><span></span><code> \`._,'/
+ (_- -_)
+   \o/
+</code></pre></div>
   </div>
+  <div class="tag-cloud">
+    <p>
+      <a href="https://ineed.to/tag/article.html">article</a>
+      <a href="https://ineed.to/tag/m365.html">m365</a>
+      <a href="https://ineed.to/tag/bec.html">bec</a>
+      <a href="https://ineed.to/tag/investigation.html">investigation</a>
+      <a href="https://ineed.to/tag/logs.html">logs</a>
+      <a href="https://ineed.to/tag/incident.html">incident</a>
+      <a href="https://ineed.to/tag/response.html">response</a>
+      <a href="https://ineed.to/tag/scripting.html">scripting</a>
+    </p>
+  </div>
+
+
+
+
+
+
 </article>
-
-  <div class="pagination">
-  </div>
-
-
 
 <footer>
 <p>
