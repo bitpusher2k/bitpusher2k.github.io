@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>iNeed.to - article</title><link href="https://ineed.to/" rel="alternate"/><link href="https://ineed.to/feeds/article.atom.xml" rel="self"/><id>https://ineed.to/</id><updated>2026-07-13T08:40:00-07:00</updated><subtitle>Seeking the wholeness of the integrated person. Technology - Martial Arts - Learning</subtitle><entry><title>DEF CON 34 Workshop</title><link href="https://ineed.to/defconworkshop/" rel="alternate"/><published>2026-07-13T08:40:00-07:00</published><updated>2026-07-13T08:40:00-07:00</updated><author><name>Bitpusher</name></author><id>tag:ineed.to,2026-07-13:/defconworkshop/</id><summary type="html">&lt;p&gt;Join me for a BEC incident response workshop at DEF CON 34&lt;/p&gt;</summary><content type="html">&lt;h1&gt;Join me at DEF CON 34&lt;/h1&gt;
+&lt;p&gt;&lt;a href="https://defcon.org/html/defcon-34/dc-34-workshops.html#content_66460"&gt;Where I'll be running a workshop on investigating and responding to business email compromise in M365 environments.&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://defcon.org/html/defcon-34/dc-34-workshops.html#content_66460"&gt;&lt;img alt="DEF CON workshop blurb" src="./../images/def-con-workshop.png" style="width: 1405px; height: auto;"/&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://events.humanitix.com/fri_pm_ws8_4033"&gt;Registration is tomorrow (July 14, 2026) at NOON pacific time.&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;Workshop resources&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://github.com/bitpusher2k/DefConWorkshop"&gt;All workshop materials will be published here when it starts.&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://github.com/bitpusher2k/DefConWorkshop"&gt;&lt;img alt="DEF CON workshop repo" src="./../images/dcworkshopheader.png" style="width: 424px; height: auto;"/&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://github.com/bitpusher2k/M365IRScripts"&gt;Main PowerShell scripts and playbook for BEC incident response are here.&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://github.com/bitpusher2k/M365IRScripts"&gt;&lt;img alt="M365 IR script repo" src="./../images/m365scriptheader.png" style="width: 1244px; height: auto;"/&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://github.com/bitpusher2k/ExcelMacros"&gt;Handy Excel/Calc macros for manual processing and review of CSV logs files are here.&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://github.com/bitpusher2k/ExcelMacros"&gt;&lt;img alt="Log processing macro repo" src="./../images/excelmacroheader.png" style="width: 1210px; height: auto;"/&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Walk on,&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt; \`._,'/
+ (_- -_)
+   \o/
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content><category term="article"/><category term="article"/><category term="DEFCON"/><category term="DEF"/><category term="CON"/><category term="workshop"/><category term="bec"/><category term="incident"/><category term="response"/><category term="investigation"/></entry></feed>
