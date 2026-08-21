@@ -50,17 +50,34 @@
 
  
 
-    <meta name="author" content="Bitpusher" />
-    <meta name="description" content="Sharing my passion for technology through consulting & scripting, martial arts through teaching, and learning/growth through chronicling my journey" />
+<meta name="author" content="Bitpusher" />
+<meta name="description" content="The complete DEF CON 34 BEC workshop materials are now up on GitHub, along with a few small updates to the M365 IR scripts." />
+<meta name="keywords" content="article, DEFCON, DEFCON34, workshop, m365, bec, incident, response, investigation, powershell">
+
+
   <meta property="og:site_name" content="iNeed.to"/>
-  <meta property="og:type" content="blog"/>
-  <meta property="og:title" content="iNeed.to"/>
-  <meta property="og:description" content="Sharing my passion for technology through consulting & scripting, martial arts through teaching, and learning/growth through chronicling my journey"/>
+  <meta property="og:title" content="DEF CON 34 Workshop Materials Uploaded"/>
+  <meta property="og:description" content="The complete DEF CON 34 BEC workshop materials are now up on GitHub, along with a few small updates to the M365 IR scripts."/>
   <meta property="og:locale" content="en_US"/>
-  <meta property="og:url" content="https://ineed.to"/>
+  <meta property="og:url" content="https://ineed.to/defcon34-materials/"/>
+  <meta property="og:type" content="article"/>
+  <meta property="article:published_time" content="2026-08-21 10:40:00-07:00"/>
+  <meta property="article:modified_time" content="2026-08-21 10:40:00-07:00"/>
+  <meta property="article:author" content="https://ineed.to/author/bitpusher.html">
+  <meta property="article:section" content="code"/>
+  <meta property="article:tag" content="article"/>
+  <meta property="article:tag" content="DEFCON"/>
+  <meta property="article:tag" content="DEFCON34"/>
+  <meta property="article:tag" content="workshop"/>
+  <meta property="article:tag" content="m365"/>
+  <meta property="article:tag" content="bec"/>
+  <meta property="article:tag" content="incident"/>
+  <meta property="article:tag" content="response"/>
+  <meta property="article:tag" content="investigation"/>
+  <meta property="article:tag" content="powershell"/>
   <meta property="og:image" content="https://ineed.to/images/fox.png">
 
-  <title>iNeed.to &ndash; Categories</title>
+  <title>iNeed.to &ndash; DEF CON 34 Workshop Materials Uploaded</title>
 
 
 </head>
@@ -200,27 +217,68 @@ rel="me"           href="https://defcon.social/@bitpusher"
 
 <article class="single">
   <header>
-    <h1 id="categories">Categories</h1>
+      
+    <h1 id="defcon34-materials">DEF CON 34 Workshop Materials Uploaded</h1>
+    <p>
+      Posted on 2026-08-21 in <a href="https://ineed.to/category/code.html">code</a>
+
+    </p>
   </header>
+
+
   <div>
-    <ul class="list">
-      <li>
-        <a href="https://ineed.to/category/article.html">article</a> (1)
-      </li>
-      <li>
-        <a href="https://ineed.to/category/code.html">code</a> (8)
-      </li>
-      <li>
-        <a href="https://ineed.to/category/fight.html">fight</a> (3)
-      </li>
-      <li>
-        <a href="https://ineed.to/category/fixmycomputer.html">fixmycomputer</a> (1)
-      </li>
-      <li>
-        <a href="https://ineed.to/category/prepare.html">prepare</a> (1)
-      </li>
-    </ul>
+    <h1>The DEF CON 34 workshop material is up</h1>
+<p>The workshop is done, and the complete set of materials from <em>"Investigating and Responding to M365 account compromise on a shoestring: Living off the Land Incident Response"</em> has now been uploaded to GitHub. Everything I walked through in the room - and quite a bit more that we didn't have time for - is in the repo for you to work through at your own pace.</p>
+<p><a href="https://github.com/bitpusher2k/DefConWorkshop">Grab it all here.</a></p>
+<p><a href="https://github.com/bitpusher2k/DefConWorkshop"><img alt="DEF CON workshop repo" src="./../images/dcworkshopheader.png" style="width: 424px; height: auto;"/></a></p>
+<p>What's in there:</p>
+<ul>
+<li>The full slide deck (v1.3), cleaned up and with a few post-workshop corrections.</li>
+<li>Two handouts - one covering the <a href="https://github.com/bitpusher2k/M365IRScripts">script-based</a> collection approach, and one covering native/manual collection for when you can't run anything extra in the tenant.</li>
+<li>Six complete example incident scenarios, each with the raw log collection, the processed/flattened log files, tenant settings notes, and a full matching set of finished reports (one-pager, investigation report, attestation letter, and internal post-mortem) so you can see a case from raw logs all the way through to deliverables.</li>
+<li>The report templates themselves, so you can produce the same deliverables for your own incidents.</li>
+<li>An LLM-related section, including a couple of skills for assisting with M365 BEC investigation and report writing.</li>
+</ul>
+<p>It's built to be worked through hands-on. You can pull the scenario log collections, run them through analysis, and compare your findings and write-ups against the included reports.</p>
+<h1>And a few small M365 IR script updates</h1>
+<p>While I was at it I pushed a handful of small updates to the <a href="https://github.com/bitpusher2k/M365IRScripts">M365IRScripts</a> collection.</p>
+<p><a href="https://github.com/bitpusher2k/M365IRScripts"><img alt="M365 IR script repo" src="./../images/m365scriptheader.png" style="width: 1244px; height: auto;"/></a></p>
+<p>Nothing dramatic this round, just refinement:</p>
+<ul>
+<li>Tidier module update and connection handling (<code>00-Update-M365Modules.ps1</code> and <code>01-Connect-M365Modules.ps1</code>), with reduced permission scope requests and read-only options where they make sense.</li>
+<li>A reworked mailbox message search script (<code>45-Search-MailboxMessage.ps1</code>) that is no longer experimental - ready for use in manual message retrieval by internet message ID.</li>
+<li>Small fixes to the IP info lookup (<code>06-Lookup-IPInfoCSV.ps1</code>) and the mailbox audit log collector (<code>34-Get-MailboxAuditLog.ps1</code>), plus general error-handling and input-validation cleanup.</li>
+</ul>
+<p>These scripts and example log collections are aimed at SMB/SME incident response where you don't have Sentinel or another SIEM to lean on, and the workflow only needs appropriate tenant access and a few PowerShell modules. The <a href="https://github.com/bitpusher2k/M365IRScripts/blob/main/README.md">ReadMe</a> has the overview of the process.</p>
+<p>And if you're doing manual CSV log review, this collection of <a href="https://github.com/bitpusher2k/ExcelMacros">Excel/Calc macros</a> is still the best way I know to slice, sort, and review those exports by hand.</p>
+<p><a href="https://github.com/bitpusher2k/ExcelMacros"><img alt="Log processing macro repo" src="./../images/excelmacroheader.png" style="width: 1210px; height: auto;"/></a></p>
+<p>Thanks to everyone who came out to the workshop. Feel free to reach out with any feedback or questions.</p>
+<p>Walk on,</p>
+<div class="highlight"><pre><span></span><code> \`._,'/
+ (_- -_)
+   \o/
+</code></pre></div>
   </div>
+  <div class="tag-cloud">
+    <p>
+      <a href="https://ineed.to/tag/article.html">article</a>
+      <a href="https://ineed.to/tag/defcon.html">DEFCON</a>
+      <a href="https://ineed.to/tag/defcon34.html">DEFCON34</a>
+      <a href="https://ineed.to/tag/workshop.html">workshop</a>
+      <a href="https://ineed.to/tag/m365.html">m365</a>
+      <a href="https://ineed.to/tag/bec.html">bec</a>
+      <a href="https://ineed.to/tag/incident.html">incident</a>
+      <a href="https://ineed.to/tag/response.html">response</a>
+      <a href="https://ineed.to/tag/investigation.html">investigation</a>
+      <a href="https://ineed.to/tag/powershell.html">powershell</a>
+    </p>
+  </div>
+
+
+
+
+
+
 </article>
 
 <footer>
